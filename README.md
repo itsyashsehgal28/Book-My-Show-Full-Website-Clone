@@ -1,38 +1,38 @@
-### book-my-show-full-website-clone
+# book-my-show-full-website-clone
 
-### How To Start The Project 
+# How To Start The Project 
 >>      npm i -g create-react-app (install create react app and make it global so that its not only for the C drive)
 >>      npx create-react-app .    (. means take the name of the folder , if you want a different name you can type instead of .)
                                     if . doesnt work because of uppercase make a new repository with name in small case 
 >>      npm start
 
-### Technologies Used : 
-# 1.        FRONTEND : Html5 , Css3 , JavaScript , React.js , TailWind 
+# Technologies Used : 
+>> 1.        FRONTEND : Html5 , Css3 , JavaScript , React.js , TailWind 
                         >> React-slicks for carousel (instead of bootstrap)
                         >> React-icons for icons (alternative for google font icons)
                         >> React-context-api for state management (instead of redux , both do the same thing)
 
-# 2.        BACKEND :  Node.Js , Express.Js
-# 3.        DATABASE : Movie Database 
+>> 2.        BACKEND :  Node.Js , Express.Js
+>> 3.        DATABASE : Movie Database 
 
 
-# Pages are the different webPages needed in the Website , each page can have 1 or more components in it
+>> Pages are the different webPages needed in the Website , each page can have 1 or more components in it
 
-# Layouts / HOCs are the redundant code (repetitive code) present in every page which is stored at 1 place and can be called out at    any time , there can be more than 1 HOC in a page (Eg: Navbar , Footer)
+>> Layouts / HOCs are the redundant code (repetitive code) present in every page which is stored at 1 place and can be called out at  any time , there can be more than 1 HOC in a page (Eg: Navbar , Footer)
 
 
-###     Pages:
+#     Pages:
 >>          Home.Page.jsx (Default.Hoc.jsx)
 >>          Movie.Page.jsx (Movie. Hoc. jsx)
 >>          Play.Page.jsx (Default.Hoc.jsx)
 
 
-###     HOCs/Layouts:
+#     HOCs/Layouts:
 >>          Default.Hoc.jsx
 >>          Movie.Hoc.jsx
 
 
-###     Components:
+#     Components:
 >>          Cast                    Cast.Component.jsx                  (getting all the movie cards)
 
 >>          Entertainment           EntertainmentCard.Component.jsx     (Entertainment section)
