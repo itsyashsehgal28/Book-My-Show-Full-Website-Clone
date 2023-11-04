@@ -1,60 +1,57 @@
 # book-my-show-full-website-clone
 
-# How To Start The Project 
->>      npm i -g create-react-app (install create react app and make it global so that its not only for the C drive)
->>      npx create-react-app .    (. means take the name of the folder , if you want a different name you can type instead of .)
+## How To Start The Project 
+      npm i -g create-react-app (install create react app and make it global so that its not only for the C drive)
+      npx create-react-app .    (. means take the name of the folder , if you want a different name you can type instead of .)
                                     if . doesnt work because of uppercase make a new repository with name in small case 
->>      npm start
+      npm start
 
-# Technologies Used : 
->> 1.        FRONTEND : Html5 , Css3 , JavaScript , React.js , TailWind 
-                        >> React-slicks for carousel (instead of bootstrap)
-                        >> React-icons for icons (alternative for google font icons)
-                        >> React-context-api for state management (instead of redux , both do the same thing)
+## Technologies Used : 
+ 1.        FRONTEND : Html5 , Css3 , JavaScript , React.js , TailWind                       
+                React-slicks for carousel (instead of bootstrap)                      
+                React-icons for icons (alternative for google font icons)                      
+                React-context-api for state management (instead of redux , both do the same thing)
 
->> 2.        BACKEND :  Node.Js , Express.Js
->> 3.        DATABASE : Movie Database 
-
-
->> Pages are the different webPages needed in the Website , each page can have 1 or more components in it
-
->> Layouts / HOCs are the redundant code (repetitive code) present in every page which is stored at 1 place and can be called out at  any time , there can be more than 1 HOC in a page (Eg: Navbar , Footer)
+ 2.        BACKEND :  Node.Js , Express.Js
+ 3.        DATABASE : Movie Database 
 
 
-#     Pages:
->>          Home.Page.jsx (Default.Hoc.jsx)
->>          Movie.Page.jsx (Movie. Hoc. jsx)
->>          Play.Page.jsx (Default.Hoc.jsx)
+Pages are the different webPages needed in the Website , each page can have 1 or more components in it
+
+Layouts / HOCs are the redundant code (repetitive code) present in every page which is stored at 1 place and can be called out at  any time , there can be more than 1 HOC in a page (Eg: Navbar , Footer)
 
 
-#     HOCs/Layouts:
->>          Default.Hoc.jsx
->>          Movie.Hoc.jsx
+## Pages:
+    Home.Page.jsx (Default.Hoc.jsx)
+    Movie.Page.jsx (Movie. Hoc. jsx)
+    Play.Page.jsx (Default.Hoc.jsx)
+
+## HOCs/Layouts:
+    Default.Hoc.jsx
+    Movie.Hoc.jsx
 
 
-#     Components:
->>          Cast                    Cast.Component.jsx                  (getting all the movie cards)
+## Components:
+    Cast                    Cast.Component.jsx                  (getting all the movie cards)
 
->>          Entertainment           EntertainmentCard.Component.jsx     (Entertainment section)
+    Entertainment           EntertainmentCard.Component.jsx     (Entertainment section)
 
->>          HeroCarousel            HeroCarousel.Component.jsx          (main carousel or hero banner)
-                                    Arrows.Component.jsx                (arrows to go left or right)
+    HeroCarousel            HeroCarousel.Component.jsx          (main carousel or hero banner)
+                            Arrows.Component.jsx                (arrows to go left or right)
 
->>          MovieHero               MovieHero.Component.jsx             (info about the actors in the movie)
-                                    MovieInfo.Component.jsx             (description of the movie)
+    MovieHero               MovieHero.Component.jsx             (info about the actors in the movie)
+                            MovieInfo.Component.jsx             (description of the movie)
 
->>          Navbar                  Navbar.Componenet.jsx               (navbar default)
-                                    MovieNavbar.Component.jsx           (navbar for movie page)
+    Navbar                  Navbar.Componenet.jsx               (navbar default)
+                            MovieNavbar.Component.jsx           (navbar for movie page)
 
->>          PaymenModal             Payment.Component.jsx               (payment gateway , razorpay)
+    PaymenModal             Payment.Component.jsx               (payment gateway , razorpay)
 
->>          PlayFilters             Filters.Componenet.jsx              (Filters for search window)
+    PlayFilters             Filters.Componenet.jsx              (Filters for search window)
     
->>          Poster                  Poster.Componenet.jsx               (Posters for the movie)
-
->>          PosterSlider            PosterSliderComponenet.jsx          (Poster Slider Carousel)
-
-
+    Poster                  Poster.Componenet.jsx               (Posters for the movie)
+    
+    PosterSlider            PosterSliderComponenet.jsx          (Poster Slider Carousel)
 
 
 
