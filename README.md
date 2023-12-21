@@ -1,10 +1,49 @@
 # book-my-show-full-website-clone
 
 ## How To Start The Project 
-      npm i -g create-react-app (install create react app and make it global so that its not only for the C drive)
-      npx create-react-app .    (. means take the name of the folder , if you want a different name you can type instead of .)
-                                    if . doesnt work because of uppercase make a new repository with name in small case 
-      npm start
+    npm i -g create-react-app (install create react app and make it global so that its not only for the C drive)
+    npx create-react-app .    (. means take the name of the folder , if you want a different name you can type instead of .)
+                                  if . doesnt work because of uppercase make a new repository with name in small case 
+    npm start
+
+## How to install TailWind ---> For Designing
+    Link : https://tailwindcss.com/docs/guides/create-react-app
+
+    npm install -D tailwindcss  ---> to install tailwind
+    npm install postcss autoprefixer
+    npx tailwindcss init        ---> to get the tailwind.config.js file
+
+## How to install React-Slicks ---> For Carousel
+    Link : https://react-slick.neostack.com/docs/get-started
+
+    npm install react-slick 
+    npm install slick-carousel 
+
+    These in app.js : 
+    import "slick-carousel/slick/slick.css"; 
+    import "slick-carousel/slick/slick-theme.css";
+
+## How to install Axios        ---> For Promise based HTTP client for the browser and node.js
+                               ---> Used to connect backend with frontend , API 
+    Link : https://www.npmjs.com/package/axios
+
+    npm i axios
+
+## How to install Headless UI  ---> For better transitions and all 
+    Link : https://headlessui.com/
+
+    npm install @headlessui/react
+
+## How to install React icons  ---> For popular icons in react projects 
+    Link : https://react-icons.github.io/react-icons/
+
+    npm install react-icons
+
+## VS Code Extensions Used : 
+    ThunderClient - for checking and running APIs
+    ES7+ React/Redux/React-Native snippets - gets you code snippets like basic functional components from rafce etc very imp
+    prettier - code formatter
+    Tailwind CSS IntelliSense - tells you the meaning of tailwind compared to normal css , check on classname in homepage
 
 ## Technologies Used : 
  1.        FRONTEND : Html5 , Css3 , JavaScript , React.js , TailWind                       
@@ -21,14 +60,16 @@ Pages are the different webPages needed in the Website , each page can have 1 or
 Layouts / HOCs are the redundant code (repetitive code) present in every page which is stored at 1 place and can be called out at  any time , there can be more than 1 HOC in a page (Eg: Navbar , Footer)
 
 
+## WORKFLOW : index.html(root) ---> index.js(root renders app) ---> homePage / moviePage / playPage
+
 ## Pages:
-    Home.Page.jsx (Default.Hoc.jsx)
-    Movie.Page.jsx (Movie. Hoc. jsx)
-    Play.Page.jsx (Default.Hoc.jsx)
+    Home.Page.jsx   (Default.layout.jsx)
+    Movie.Page.jsx  (Movie.layout.jsx)
+    Play.Page.jsx   (Default.layout.jsx)
 
 ## HOCs/Layouts:
-    Default.Hoc.jsx
-    Movie.Hoc.jsx
+    Default.layout.jsx
+    Movie.layout.jsx
 
 
 ## Components:
@@ -42,16 +83,16 @@ Layouts / HOCs are the redundant code (repetitive code) present in every page wh
     MovieHero               MovieHero.Component.jsx             (info about the actors in the movie)
                             MovieInfo.Component.jsx             (description of the movie)
 
-    Navbar                  Navbar.Componenet.jsx               (navbar default)
+    Navbar                  Navbar.Component.jsx                (navbar default)
                             MovieNavbar.Component.jsx           (navbar for movie page)
 
     PaymenModal             Payment.Component.jsx               (payment gateway , razorpay)
 
-    PlayFilters             Filters.Componenet.jsx              (Filters for search window)
+    PlayFilters             Filters.Component.jsx               (Filters for search window)
     
-    Poster                  Poster.Componenet.jsx               (Posters for the movie)
+    Poster                  Poster.Component.jsx                (Posters for the movie)
     
-    PosterSlider            PosterSliderComponenet.jsx          (Poster Slider Carousel)
+    PosterSlider            PosterSliderComponent.jsx           (Poster Slider Carousel)
 
 
 

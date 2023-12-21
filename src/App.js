@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"; 
+
+// react slicks for carousel
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// Routers
+import { Routes, Route } from "react-router-dom";
+
+// pages
+import PlayPage from "./Pages/Play.page";
+import MoviePage from "./Pages/Movie.page";
+import HomePage from "./Pages/Home.page";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      {/* http://localhost:3000 */}
+
+      <Route path="/movie/:id" element={<MoviePage />} />
+      {/* http://localhost:3000/movie/123 */}
+
+      <Route path="/plays" element={<PlayPage />} />
+      {/* http://localhost:3000/plays */}
+    </Routes>
   );
 }
 
