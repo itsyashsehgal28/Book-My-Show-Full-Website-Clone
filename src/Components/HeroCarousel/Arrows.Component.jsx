@@ -12,7 +12,7 @@ export function NextArrow(props) {
     return(
         <>
             <div className={props.className} style={{color:"red" , padding: "10px"}} onClick={props.onClick}>
-                {/* these styles and properties are there in react-slick which is 3rd party application */}
+                {/* these styles and properties are there in react-slick which is already imported and is being used in carousel */}
             </div>
         </>
     )

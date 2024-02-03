@@ -10,8 +10,11 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
+    {/* strict mode in JavaScript is when it works in strict mode so that developers can easily debug their code
+        since otherwise its a loosely typed language */}
+        
     <BrowserRouter>
+    {/* browser router will encapsulate all routes */}
         <App />
     </BrowserRouter>
 

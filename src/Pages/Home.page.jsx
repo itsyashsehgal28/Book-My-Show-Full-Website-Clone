@@ -6,7 +6,6 @@ import DefaultLayoutHoc from "../Layouts/Default.layout";
 // Components
 import EntertainmentCard from "../Components/Entertainment/EntertainmentCard.Component";
 import HeroCarousel from "../Components/HeroCarousel/HeroCarousel.Component";
-import Arrows from "../Components/HeroCarousel/Arrows.Component";
 import PosterSlider from "../Components/PosterSlider/PosterSlider.Component";
 
 const HomePage = () => {
@@ -23,7 +22,7 @@ const HomePage = () => {
 
       <div className="container mx-auto px-4 md:px-12 my-8">
         <h1 className="text-2xl font-bold text-gray-800">
-          The Best of Entertainment
+          The Best of Live Events
         </h1>
         <EntertainmentCard />
       </div>
@@ -32,8 +31,8 @@ const HomePage = () => {
         <PosterSlider
           // these are the props or arguements to show the different movie posters under recommended movies
           title="Recommended Movies"
-          // title of this slider , this shows on hover 
-          subject="List of Recommended Movies"
+          // title of this slider , this shows on hover
+          subTitle="List of Recommended Movies"
           // a little info about the component
           poster={recommendedMovies}
           // recommendedMovies is an array toh ismai list aajayegi of all movies with their info
@@ -54,7 +53,7 @@ const HomePage = () => {
 
           <PosterSlider
             title="Premier Movies"
-            subject="Brand New Releases Every Friday"
+            subTitle="Brand New Releases Every Friday"
             poster={premierMovies}
             isDark={true}
           />
@@ -64,11 +63,10 @@ const HomePage = () => {
       <div className="container mx-auto px-4 md:px-12 my-8">
         <PosterSlider
           title="Online Stream Events"
-          subject="Online Stream Events Every Friday"
+          subTitle="Online Stream Events Every Friday"
           poster={onlineStreamEvents}
           isDark={false}
         />
-        
       </div>
     </>
   );

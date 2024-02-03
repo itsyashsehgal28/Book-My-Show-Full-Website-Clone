@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+
 import HeroSlider from "react-slick";
+// a class inside react-slick
+
 import { NextArrow, PrevArrow } from "./Arrows.Component";
 
 const HeroCarousel = () => {
@@ -44,7 +47,6 @@ const HeroCarousel = () => {
     // settings for large screen size
     dots: true,
     arrows: true,
-    // slidesToShow: 1,
     infinite: true,
     speed: 500,
     slideToScroll: 1,
@@ -56,10 +58,10 @@ const HeroCarousel = () => {
     prevArrow: <PrevArrow/>,
   };
   const settings = {
-    // settings for medium and small screen
+    // settings for medium and small screen size
+
     // dots: true,
     arrows: true,
-    // slidesToShow: 1,
     infinite: true,
     speed: 500,
     slideToScroll: 1,
@@ -74,9 +76,9 @@ const HeroCarousel = () => {
   return (
     <>
       <div className="lg-hidden">
-        {/* this one is visible on small and medium screen , hidden on large */}
+        {/* this acts like an IF condition ---> this one is visible on small and medium screen , hidden on large and extra large */}
         <HeroSlider {...settings}>
-          {/* this is the heroslider definition */}
+          {/* this heroslider is by default from react-slicks */}
           {images.map((image) => {
             <div className="w-full h-56 md:h-80 py-3">
               <img
@@ -89,6 +91,8 @@ const HeroCarousel = () => {
           })}
         </HeroSlider>
       </div>
+
+
       <div className="hidden lg-block">
         {/* this one is hidden on small and medium screen , visible as block scope on large */}
         <HeroSlider {...settingsLG}>
@@ -104,6 +108,8 @@ const HeroCarousel = () => {
           })}
         </HeroSlider>
       </div>
+
+      
     </>
   );
 };

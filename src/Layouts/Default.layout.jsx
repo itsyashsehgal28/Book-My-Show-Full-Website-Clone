@@ -6,7 +6,7 @@ import React from 'react' ;
 import Navbar from '../Components/Navbar/Navbar.Component';
 
 const DefaultLayoutHoc = 
-(Component) => // layout encapsulates the page so we will have certain component in it, hence we are calling the component
+(Component) => // layout encapsulates the page so we will have certain components in it, hence we are calling the component
 ({...props}) => //the functional component may have some parameters so we are using spread operator for the parameters
 {
   return (
