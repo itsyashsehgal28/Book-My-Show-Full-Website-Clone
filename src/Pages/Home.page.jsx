@@ -34,7 +34,7 @@ const HomePage = () => {
           // title of this slider , this shows on hover
           subTitle="List of Recommended Movies"
           // a little info about the component
-          poster={recommendedMovies}
+          posters={recommendedMovies}
           // recommendedMovies is an array toh ismai list aajayegi of all movies with their info
           isDark={false}
           // this is a parameter which makes the background dark so it's false here which means we dont want it
@@ -54,7 +54,7 @@ const HomePage = () => {
           <PosterSlider
             title="Premier Movies"
             subTitle="Brand New Releases Every Friday"
-            poster={premierMovies}
+            posters={premierMovies}
             isDark={true}
           />
         </div>
@@ -64,7 +64,7 @@ const HomePage = () => {
         <PosterSlider
           title="Online Stream Events"
           subTitle="Online Stream Events Every Friday"
-          poster={onlineStreamEvents}
+          posters={onlineStreamEvents}
           isDark={false}
         />
       </div>
