@@ -1,10 +1,31 @@
 import React from 'react'
 import Slider from 'react-slick';
-import Poster from '../Poster.Component';
+import Poster from '../Poster/Poster.Component';
 
 const PosterSlider = (props) => {
   const {title , subtitle ,posters , isDark} = props
-  const settings = []
+  const settings = {
+    infinte: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
@@ -23,7 +44,10 @@ const PosterSlider = (props) => {
         </p>
       </div>
       <Slider {...settings}>
-        {posters.map((each)=> (<Poster {...each} isDark={isDark} />))}
+        {posters.map((each , index)=> (<Poster {...each} isDark={isDark} key={index} />))}
+        {/* posters is the photo of the movie or the event , hence for each posters we will create a final poster 
+            here we are selecting the title , subtitle , photo and isDark or not and collecting it together
+            in Poster we will combine them and make the slider */}
       </Slider>
     </>
   );

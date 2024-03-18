@@ -24,7 +24,7 @@
     import "slick-carousel/slick/slick-theme.css";
 
 ## How to install Axios        ---> For Promise based HTTP client for the browser and node.js
-                               ---> Used to connect backend with frontend , API 
+##                             ---> Used to connect backend with frontend , API 
     Link : https://www.npmjs.com/package/axios
 
     npm i axios
@@ -95,7 +95,9 @@ Layouts / HOCs are the redundant code (repetitive code) present in every page wh
     PosterSlider            PosterSliderComponent.jsx           (Poster Slider Carousel)
 
 
+## API key for TMDB : 00faa6acb6cc522b15d1d4300e4a28e6
 
+## API read access token : eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMGZhYTZhY2I2Y2M1MjJiMTVkMWQ0MzAwZTRhMjhlNiIsInN1YiI6IjY1ZDM5YmMyN2Q1ZGI1MDE4NjM1YzgxNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.E7L-MjPJIlrTO6GAmm-atmwV6iUvpvbURQhHDiS04PI
 
 
 
