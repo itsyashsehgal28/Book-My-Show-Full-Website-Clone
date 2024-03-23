@@ -3,7 +3,10 @@ import Slider from 'react-slick';
 import Poster from '../Poster/Poster.Component';
 
 const PosterSlider = (props) => {
-  const {title , subtitle ,posters , isDark} = props
+  
+  const {title , subtitle ,posters , isDark , config} = props
+  // right value goes into the left , first value of props goes into title and so on
+
   const settings = {
     infinte: true,
     speed: 500,
