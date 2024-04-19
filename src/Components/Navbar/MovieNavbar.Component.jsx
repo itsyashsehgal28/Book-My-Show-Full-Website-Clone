@@ -1,9 +1,9 @@
-import React, { useContext } from 'react' ;
-import {BiChevronDown , BiMenu , BiSearch , BiShareAlt} from "react-icons/bi" ;
-import {MovieContext} from "../../ContextAPI/movie.Context" ;
+import React, { useContext } from "react";
+import { BiChevronDown, BiMenu, BiSearch, BiShareAlt } from "react-icons/bi";
+import { MovieContext } from "../../ContextAPI/movie.Context";
 
 const NavSm = () => {
-  const {movie} = useContext(MovieContext);
+  const { movie } = useContext(MovieContext);
   return (
     <>
       <div className="text-gray-700 flex items-center justify-between">
@@ -12,14 +12,14 @@ const NavSm = () => {
         </div>
       </div>
 
-      <div className='w-8 h-8'>
-        <BiShareAlt className='w-full h-full' />
+      <div className="w-8 h-8">
+        <BiShareAlt className="w-full h-full" />
       </div>
     </>
   );
-}
+};
 
-const NavLg=() => {
+const NavLg = () => {
   return (
     <>
       <div className="container flex mx-auto px-4 items-center justify-between">
@@ -38,32 +38,36 @@ const NavLg=() => {
           </div>
         </div>
 
-        <div className='flex items-center gap=3'>
-          <span className='text-gray-200 text-base flex items-center cursor-pointer hover:text-white'>New Delhi <BiChevronDown/></span>
-          <button className='bg-red-600 text-white px-2 py-1 text-sm rounded'>Sign In</button>
-          <div className='w-8 h-8 text-white'><BiMenu className='w-full h-full'/></div>
+        <div className="flex items-center gap=3">
+          <span className="text-gray-200 text-base flex items-center cursor-pointer hover:text-white">
+            New Delhi <BiChevronDown />
+          </span>
+          <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
+            Sign In
+          </button>
+          <div className="w-8 h-8 text-white">
+            <BiMenu className="w-full h-full" />
+          </div>
         </div>
       </div>
     </>
   );
-}
+};
 
 const MovieNavbar = () => {
-  
   return (
     <>
-    <nav className='bg-white border-b-2 lg:border-b-0 lg:bg-darkBackground-700 p-4'>
-      
-      <div className='md:hidden'>
-        <NavSm/>
-      </div>
+      <nav className="bg-white border-b-2 lg:border-b-0 lg:bg-darkBackground-700 p-4">
+        <div className="md:hidden">
+          <NavSm />
+        </div>
 
-      <div className='hidden lg:flex w-full'>
-        <NavLg/>
-      </div>
-    </nav>
+        <div className="hidden lg:flex w-full">
+          <NavLg />
+        </div>
+      </nav>
     </>
-  )
-}
+  );
+};
 
-export default MovieNavbar ;
+export default MovieNavbar;

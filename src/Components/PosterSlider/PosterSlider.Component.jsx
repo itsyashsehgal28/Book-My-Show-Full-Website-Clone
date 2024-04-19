@@ -35,7 +35,7 @@ const PosterSlider = (props) => {
       <div className="flex flex-col items-start sm:ml-3 my-2">
         <h3
           className={`text-2xl font-bold ${
-            isDark ? "text-white" :"text-black"
+            isDark ? "text-white" : "text-black"
           }`}>
           {title}
         </h3>
@@ -46,12 +46,33 @@ const PosterSlider = (props) => {
           {subtitle}
         </p>
       </div>
-      <Slider {...settings}>
-        {posters.map((each , index)=> (<Poster {...each} isDark={isDark} key={index} />))}
-        {/* posters is the photo of the movie or the event , hence for each posters we will create a final poster 
+      {config && (
+        <Slider {...config}>
+          {posters.map((each, index) => (
+            <Poster {...each} isDark={isDark} key={index} />
+          ))}
+
+          {/* posters is the photo of the movie or the event , hence for each posters we will create a final poster 
             here we are selecting the title , subtitle , photo and isDark or not and collecting it together
             in Poster we will combine them and make the slider */}
-      </Slider>
+        </Slider>
+        // if we have some config files we will be using the other settings on movie page otherwise if no config files we will be
+        // using settings that are here on this page
+      )}
+
+      {!config && (
+        <Slider {...settings}>
+          {posters.map((each, index) => (
+            <Poster {...each} isDark={isDark} key={index} />
+          ))}
+
+          {/* posters is the photo of the movie or the event , hence for each posters we will create a final poster 
+            here we are selecting the title , subtitle , photo and isDark or not and collecting it together
+            in Poster we will combine them and make the slider */}
+        </Slider>
+        // if we have some config files we will be using the other settings on movie page otherwise if no config files we will be
+        // using settings that are here on this page
+      )}
     </>
   );
 }

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import PosterSlider from "../Components/PosterSlider/PosterSlider.Component";
+import Cast from "../Components/Cast/Cast.Component";
 
 import { FaCcApplePay, FaCcVisa, faCcApplePay } from "react-icons/fa";
 
@@ -16,7 +17,7 @@ const MoviePage = () => {
   const { id } = useParams();
 
   // useState is for props while useContext is for children/ APIs
-  const { movie , setMovie} = useContext(MovieContext);
+  const { movie, setMovie } = useContext(MovieContext);
 
   const [cast, setCast] = useState([]);
   const [similarMovies, setSimilarMovies] = useState([]);
@@ -71,12 +72,52 @@ const MoviePage = () => {
     requestMovie();
   }, [id]);
 
-  const settingsCast = {};
-  const settings = {};
+  const settingsCast = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 4, slidesToScroll: 4 },
+      },
+      {
+        breakpoint: 600,
+        settings: { slidesToShow: 3, slidesToScroll: 2 },
+      },
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
+      },
+    ],
+  };
+  const settings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 3, slidesToScroll: 3 },
+      },
+      {
+        breakpoint: 600,
+        settings: { slidesToShow: 2, slidesToScroll: 2 },
+      },
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
+      },
+    ],
+  };
 
   return (
     <>
-    <MovieHero/>
+      <MovieHero />
       <div className="my-12 container px-4 lg-ml-20 lg:w-2/1">
         <div className="flex flex-col items-start gap-3">
           <h1 className="text-gray-800 font-bold text-2xl gap-3">
@@ -144,7 +185,21 @@ const MoviePage = () => {
           <hr />
         </div>
 
-        
+        <div className="my-8">
+          <h2 className="text-gray-800 font-bold text-2xl mb-4">Cast and Crew</h2>
+          <Slider {...settingsCast}>
+            {cast.map((castData)=> (
+              <Cast image={castData.profile_path}
+              castName={movie.original_name}
+              role={movie.character} />
+            ))};
+          </Slider>
+        </div>
+
+        <div className="my-8">
+          <hr />
+        </div>
+
         <PosterSlider
           config={settings}
           title="BMS Exclusive Movies"
