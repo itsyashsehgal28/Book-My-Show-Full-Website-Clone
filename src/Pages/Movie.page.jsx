@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import PosterSlider from "../Components/PosterSlider/PosterSlider.Component";
 import Cast from "../Components/Cast/Cast.Component";
 
-import { FaCcApplePay, FaCcVisa, faCcApplePay } from "react-icons/fa";
+import { FaCcApplePay, FaCcVisa } from "react-icons/fa";
 
 // context api
 import { MovieContext } from "../ContextAPI/movie.Context";
@@ -30,6 +30,7 @@ const MoviePage = () => {
       // https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key=00faa6acb6cc522b15d1d4300e4a28e6
 
       setCast(getCast.data.cast);
+      // console.log({cast});
       // its getCast.data.cast because of the json format , getCast gives all data under which we want data under which we want cast
     };
     requestCast();
@@ -88,7 +89,7 @@ const MoviePage = () => {
         settings: { slidesToShow: 3, slidesToScroll: 2 },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 480,
         settings: { slidesToShow: 2, slidesToScroll: 1 },
       },
     ],
@@ -109,7 +110,7 @@ const MoviePage = () => {
         settings: { slidesToShow: 2, slidesToScroll: 2 },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 480,
         settings: { slidesToShow: 2, slidesToScroll: 1 },
       },
     ],
@@ -134,7 +135,7 @@ const MoviePage = () => {
           <h2 className="text-gray-800 font-bold text-2xl mb-3">
             Applicable Offers
           </h2>
-          <div className="flex flex-col gap-3 lg:flex-row lg:w-2/4">
+          <div className="flex flex-col gap-3 lg:flex-row">
             <div className="flex items-start gap-2 bg-yellow-100 p-3 border-yellow-400 border-dashed border-2 rounded-md">
               <div className="w-8 h-8">
                 <FaCcVisa className="w-full h-full" />
@@ -186,13 +187,18 @@ const MoviePage = () => {
         </div>
 
         <div className="my-8">
-          <h2 className="text-gray-800 font-bold text-2xl mb-4">Cast and Crew</h2>
+          <h2 className="text-gray-800 font-bold text-2xl mb-4">
+            Cast and Crew
+          </h2>
           <Slider {...settingsCast}>
-            {cast.map((castData)=> (
-              <Cast image={castData.profile_path}
-              castName={movie.original_name}
-              role={movie.character} />
-            ))};
+            {cast.map((castData) => (
+              <Cast
+                key = {castData.id}
+                image={castData.profile_path}
+                castName={castData.original_name}
+                role={castData.character}
+              />
+            ))}
           </Slider>
         </div>
 
@@ -200,9 +206,10 @@ const MoviePage = () => {
           <hr />
         </div>
 
+
         <PosterSlider
           config={settings}
-          title="BMS Exclusive Movies"
+          title="Similar Movies"
           posters={similarMovies}
           isDark={false}
         />

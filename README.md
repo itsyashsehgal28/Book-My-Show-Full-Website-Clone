@@ -86,7 +86,7 @@ Layouts / HOCs are the redundant code (repetitive code) present in every page wh
     Navbar                  Navbar.Component.jsx                (navbar default)
                             MovieNavbar.Component.jsx           (navbar for movie page)
 
-    PaymenModal             Payment.Component.jsx               (payment gateway , razorpay)
+    PaymentModal            Payment.Component.jsx               (payment gateway , razorpay)
 
     PlayFilters             Filters.Component.jsx               (Filters for search window)
     
