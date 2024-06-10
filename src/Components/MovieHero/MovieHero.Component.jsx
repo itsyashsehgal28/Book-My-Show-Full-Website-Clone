@@ -41,15 +41,19 @@ const MovieHero = () => {
               Buy $30
             </button>
           </div>
+          {/* this is written twice because this is hidden on large , only visible on small and medium */}
         </div>
 
-        {/* now for large screen */}
+        {/* now for large screen
+            for large screen we are using a gradient if we dont have a movie poster for the background
+        */}
         <div
           className="relative hidden w-full lg:block"
           style={{ height: "28rem" }}>
 
           <div
             className="absolute z-10 w-full h-full"
+            // z-10 so this is behind the image 
             style={{
               backgroundImage:
                 "linear-gradient(90deg , rgb(34,34,34)24.95% , rgb(34,34,34)38.2% , rgba(34,34,34,0.04)97.47% , rgb(34,34,34)100%)",

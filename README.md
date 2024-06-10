@@ -6,6 +6,23 @@
                                   if . doesnt work because of uppercase make a new repository with name in small case 
     npm start
 
+## DevOps
+    Dev -> Development Team
+    Ops -> Operations Team
+
+    DevOps & CICD (Docker and kubernetes)
+    -> Kubernetes is built on top of docker , like react is built on top of javascript
+    -> Docker is also called as a container and its called as Containerization
+    -> Docker assigns the resource from the local machine to the virtual machines 
+    -> Docker >> EC2 instance >> img and container
+
+    Kubernetes (master and child node)
+    -> can be explained like an orchestra 
+    -> kubernetes has nodes :
+        master node -> guy giving directions on how to play (the lead)
+        child node  -> people playing instruments follow the guidance of the lead 
+
+
 ## How to install TailWind ---> For Designing
     Link : https://tailwindcss.com/docs/guides/create-react-app
 
