@@ -17,7 +17,7 @@ const DefaultLayoutHoc =
         <Component {...props} />
         {/* in the return statement we can make use of the props to manipulate the component */}    
 
-        <div>Footer , this is static until we make it </div>
+        <div>Footer</div>
     
     </div>
   );

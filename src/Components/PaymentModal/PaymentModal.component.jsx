@@ -2,14 +2,30 @@ import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
-const PaymentModal = ({setIsOpen, isOpen, price}) => {
+const PaymentModal = ({ setIsOpen, isOpen, price }) => {
   const closeModal = () => {
     setIsOpen(false);
   };
 
   const launchRazorPay = () => {
-    
-  }
+    let options = {
+      //will not work for me since i havent configured razorpay
+      key: "rzp_test_tr5ZbjvDJSItP3",
+      amount: price * 100,
+      currency: "INR",
+      name: "Book My Show Clone",
+      description: "Movie Purchase or Rent",
+      handler: () => {
+        setIsOpen(false);
+        alert("Payment Successfull");
+        // handler will close the payment window and open a new pop up saying payment successfull
+      },
+      theme: { color: "#c4242d" },
+    };
+
+    let razorPay = window.Razorpay(options);
+    razorPay.open();
+  };
 
   return (
     <>

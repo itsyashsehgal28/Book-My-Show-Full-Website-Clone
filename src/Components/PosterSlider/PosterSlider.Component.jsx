@@ -40,7 +40,7 @@ const PosterSlider = (props) => {
           {title}
         </h3>
         <p
-          className={`text-xl font-bold ${
+          className={`text-sm ${
             isDark ? "text-white" : "text-gray-800"
           }`}>
           {subtitle}

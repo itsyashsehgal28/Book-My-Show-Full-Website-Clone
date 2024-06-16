@@ -11,16 +11,76 @@
     Ops -> Operations Team
 
     DevOps & CICD (Docker and kubernetes)
-    -> Kubernetes is built on top of docker , like react is built on top of javascript
     -> Docker is also called as a container and its called as Containerization
     -> Docker assigns the resource from the local machine to the virtual machines 
-    -> Docker >> EC2 instance >> img and container
 
-    Kubernetes (master and child node)
-    -> can be explained like an orchestra 
-    -> kubernetes has nodes :
-        master node -> guy giving directions on how to play (the lead)
-        child node  -> people playing instruments follow the guidance of the lead 
+    -> Docker >> EC2 instance(service under AWS) >> img and container
+        -> Image (Parent) => image can contain n number of childs or servers , encapsulates one or is a container
+        By LAKSHAY - image is like a blueprint containing only the required files 
+        
+        -> Container (Child) || Server 
+            ->example IRCTC website will contain servers for frontend and backend and all will be put in a container or parent is
+              irctc website which will be our image and servers are our containers or childs 
+
+    -> Client Server Architecture (client side means frontend and server architecture means backend)
+        -> Client architecture has different servers mostly used on port 3031
+        -> Server architecture has different servers mostly used on port 8081
+
+    Kubernetes (Master and Child node)
+    -> Kubernetes is built on top of docker , like react is built on top of javascript
+
+    -> can be explained like an orchestra , kubernetes has nodes :
+        -> Master node -> guy giving directions on how to play (the lead)
+
+        -> Child node  -> people playing instruments follow the guidance of the lead 
+                       -> Child Node has 2 parts : 
+                       -> 1. POD (containers or servers)
+                       -> 2. Developement (used to monitor POD , keeps a close eye on it) 
+
+    
+    -> Docker Deamon -> Server Side (Initialization => first thing when a website is loaded is server intialization even before loading frontend) 
+    -> Docker Client -> Client Side
+    -> Docker Swarm  -> Master Node || Main node => Used for Configuration
+
+
+
+    AWS(Amazon Web Service) >> EC2(Amazon Elastic Compute Cloud) (provides VIRTUAL MACHINES)
+    -> AWS architecture looks like this 
+            Client Architecture and servers 
+                                                                            kubernetes 
+            Server Architecture (backend) and its servers 
+
+       AWS provides the client server architecture since we are building a full stack application and provides docker (kubernetes) with it
+
+    
+    Proxy Server
+    -> This server checks for similar requests that had been hit before and if it finds it , reports back the response from the request which 
+        was hit before 
+
+        example : www.facebook.com/login ----> proxy server (new request , never done before) sends it to -----> main server ----> response abc
+                  www.facebook.com/login ----> proxy server (checks for the request , finds it ) ----> response abc
+
+        proxy server acts as an intermediary and helps in LOAD BALANCING with the server
+
+
+    NGINX(Light Weight Servers)
+    -> LOAD BALANCING :
+        => SERVER (1000 REQUESTS / HOUR) but if it gets 1500 requests in 1 hr the server will break so we will use proxy server for load 
+           balancing , lets see how : 
+
+           server(1500 requests) - 500 (similar requests handled by proxy server) will balance the load on the server and it will not break
+           proxy server will filter out the similar requests and it will not reach the server hence balancing load 
+
+    -> REVERSE PROXY :
+        -> In case load is more on the website (more traffic) and since we dont want our server to break we will have more than 1 server
+        -> In reverse proxy things work like this : 
+
+        example: NORMALLY => www.facebook.com/login ----> proxy server (new request , never done before) sends it to -----> server 1 
+                 Reverse Proxy => proxy server will check which server is free or less busy and send the request to that server (1 or 2)
+
+    
+                 
+
 
 
 ## How to install TailWind ---> For Designing

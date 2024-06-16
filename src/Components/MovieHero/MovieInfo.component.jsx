@@ -25,7 +25,7 @@ const MovieInfo = () => {
     <>
       <PaymentModal setIsOpen={setIsOpen} isOpen={isOpen} price={price} /> 
       <div className="flex flex-col gap-8">
-        <h1 className="text-white font-bold text-4xl">
+        <h1 className="text-white font-bold text-5xl">
           {movie.original_title}
         </h1>
         <div className="text-white flex flex-col gap-2">

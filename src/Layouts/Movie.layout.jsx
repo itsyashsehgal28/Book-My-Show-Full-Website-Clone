@@ -30,7 +30,7 @@ const MovieLayoutHoc =
       <Component {...props} />
       {/* in the return statement we can make use of the props to manipulate the component */}
 
-      <div>Footer , static until i make it</div>
+      <div>Footer</div>
       
     </div>
   );

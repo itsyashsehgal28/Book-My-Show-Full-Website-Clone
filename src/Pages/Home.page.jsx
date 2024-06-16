@@ -106,7 +106,7 @@ useEffect(() => {
       {/* calling the hero carousel component inside homepage , this hero carousel is for the movies that are showcased */}
 
       <div className="container mx-auto px-4 md:px-12 my-8">
-        <h1 className="text-2xl font-bold text-gray-800">
+        <h1 className="text-2xl font-bold text-gray-800 sm:ml-3 ml-0 my-3">
           The Best of Live Events
         </h1>
         <EntertainmentCard />
@@ -130,7 +130,7 @@ useEffect(() => {
         <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
           <div className="hidden md:flex">
             <img
-              // src="https://tse1.mm.bing.net/th?id=OIP.5aKWh9rgmA5Jqytk8-D8DwHaCp&pid=Api&rs=1&c=1&qlt=95&w=259&h=92"
+              src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png"
               alt="Rupay"
               className="w-full h-full"
             />

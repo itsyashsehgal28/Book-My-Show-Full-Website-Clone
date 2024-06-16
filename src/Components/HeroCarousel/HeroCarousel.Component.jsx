@@ -6,7 +6,7 @@ import HeroSlider from "react-slick";
 import { NextArrow, PrevArrow } from "./Arrows.Component";
 
 const HeroCarousel = () => {
-  const [images, setImages] = useState([
+  const [images] = useState([
     {
       // this was copy pasted 
       adult: false,
@@ -50,7 +50,7 @@ const HeroCarousel = () => {
     infinite: true,
     speed: 500,
     slideToScroll: 1,
-    slidesToShow: 3,
+    slidesToShow: 1,
     // autoplay: true,
     // autoplaySpeed: 2000,
     // cssEase: "linear",
@@ -65,7 +65,7 @@ const HeroCarousel = () => {
     infinite: true,
     speed: 500,
     slideToScroll: 1,
-    slidesToShow: 3,
+    slidesToShow: 1,
     // autoplay: true,
     // autoplaySpeed: 2000,
     // cssEase: "linear",
@@ -79,16 +79,16 @@ const HeroCarousel = () => {
         {/* this acts like an IF condition ---> this one is visible on small and medium screen , hidden on large and extra large */}
         <HeroSlider {...settings}>
           {/* this heroslider is by default from react-slicks */}
-          {images.map((image , index ) => {
+          {images.map((images , index ) => (
             <div className="w-full h-56 md:h-80 py-3" key={index}>
               <img
                 src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`}
                 // hence image will be processed like : https://image.tmdb.org/t/p/original/ugS5FVfCI3RV0ZwZtBV3HAV75OX.jpg
                 alt="Hero Banner"
-                className="w-full h-full rounded-md object-cover"
+                className="w-full h-full rounded-md"
               />
-            </div>;
-          })}
+            </div>
+          ))}
         </HeroSlider>
       </div>
 
@@ -96,16 +96,16 @@ const HeroCarousel = () => {
       <div className="hidden lg-block">
         {/* this one is hidden on small and medium screen , visible as block scope on large */}
         <HeroSlider {...settingsLG}>
-          {images.map((image , index) => {
+          {images.map((images , index) => (
             <div className="w-full h-96 px-2 py-3" key={index}>
               <img
                 src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`}
                 // hence image will be processed like : https://image.tmdb.org/t/p/original/ugS5FVfCI3RV0ZwZtBV3HAV75OX.jpg
                 alt="Hero Banner"
-                className="w-full h-full rounded-md object-cover"
+                className="w-full h-full rounded-md"
               />
-            </div>;
-          })}
+            </div>
+          ))}
         </HeroSlider>
       </div>
 
